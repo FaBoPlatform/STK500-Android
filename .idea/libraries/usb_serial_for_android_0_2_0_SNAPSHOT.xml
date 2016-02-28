@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="usb-serial-for-android-0.2.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.hoho.android/usb-serial-for-android/0.2.0-SNAPSHOT/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/app/build/intermediates/exploded-aar/com.hoho.android/usb-serial-for-android/0.2.0-SNAPSHOT/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

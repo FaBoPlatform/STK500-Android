@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/libs/internal_impl-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e239441500605809818997dd63b62a947195f8c">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/internal_impl-23.2.0_d661b845fcadcd03a25fc5855438e8aec8a56e4e.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.android.support/support-v4/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e5f32fa48a3eb2de0c987025c11b6e3864b634d9">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.2.0_7a1321e5bc99814a53717dcf8f671cb9af409d12.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="292a9fa091757208efa65e77eef63088247e51f3">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-23.2.0_4f688972851f2a033b8ce2f745e5f7aa83dd858f.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/STK500-Android/stk500/unspecified/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="b65769e932df2503810089e6a69d52eb9e4501d1">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/STK500-Android-stk500-unspecified_fa2ff04ff43a41ae7dfccf648b55cfee26a6bc9e.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.2.0/support-annotations-23.2.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="c5bf571bb10462bd90e5419ade67793f71acbc87">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/support-annotations-23.2.0_9f532df410bfefb6e311cbf23b16e88b9a463e65.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="6e3578f92f7462d1a935a1d36173e3bdd1234976">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.2.0_0ada1531b8acfe0e98a2cb8f363bfd1818f8ce5f.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/23.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="8c108c22c99e794eff255bb34d2a461200c4cbb0">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-23.2.0_5f515ae08f10023e52e34fbdb29aba3929eb737c.jar" />
+    </item>
+    <item
+        jar="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/exploded-aar/com.hoho.android/usb-serial-for-android/0.2.0-SNAPSHOT/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="0f5d3bc2c2e97e0d9372e601d83d7567ef6a4d0f">
+        <dex dex="/Users/sasakiakira/Documents/workspace_fabo_online_lib/STK500-Android/app/build/intermediates/pre-dexed/debug/com.hoho.android-usb-serial-for-android-0.2.0-SNAPSHOT_5af191ef582d76022804454e771addd8ed3eef5a.jar" />
+    </item>
+
+</items>
