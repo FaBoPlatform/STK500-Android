@@ -422,15 +422,26 @@ public class Stk500v1 {
                 // calc count of data.
                 pageCount = Math.round(Math.round(((hex.length - unusedBytes)/2))/StkCmdV1.PAGE_SIZE);
 
+                int lastCount = 0;
+                int nowPos = 0;
+
                 for(int l = 0; l < hexLines; l++){
-                    int nowPos = 45 * l;
+                    nowPos = nowPos + lastCount;
+                    lastCount = 0;
                     for(int i = 9; i < 41; i += 2){
                         if(nowPos + i < hex.length - 4){
+                            if(hex[nowPos + i + 2] == '\r'){
+                                lastCount = i + 4; // ¥rの次も飛ばす
+                                break;
+                            }
                             byte msb = hex[nowPos + i];
                             byte lsb = hex[nowPos + i + 1];
                             byte[] asciiStr = {msb, lsb};
                             String strHex = new String(asciiStr);
                             myHex.add((byte) (Integer.parseInt(strHex, 16) & 0xff));
+                            if(i == 39){
+                                lastCount = 45;
+                            }
                         }
                     }
                 }

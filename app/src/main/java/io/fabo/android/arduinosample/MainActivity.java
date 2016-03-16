@@ -31,11 +31,6 @@ public class MainActivity extends AppCompatActivity {
     /** STK500. */
     private Stk500v1 mStk500v1;
 
-    /** Permission. */
-    private PendingIntent mPermissionIntent;
-
-    /** Usb device. */
-    private UsbDevice device;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
         mButtonSend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mStk500v1.setData(R.raw.firmware);
+                mStk500v1.setData(R.raw.standardfirmata);
                 mStk500v1.sendFirmware();
             }
         });
