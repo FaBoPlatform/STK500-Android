@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity implements StkWriterListener
     /** Send button. */
     private Button mButtonSend;
 
+    /** Close button. */
+    private Button mButtonClose;
+
     /** TextView. */
     private static TextView mTextViewCommment;
 
@@ -47,10 +50,12 @@ public class MainActivity extends AppCompatActivity implements StkWriterListener
 
         mButtonConnect = (Button) findViewById(R.id.buttonConnect);
         mButtonSend = (Button) findViewById(R.id.buttonSend);
+        mButtonClose = (Button) findViewById(R.id.buttonClose);
 
         mButtonConnect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(TAG, "openUSB---0");
                 // ボタンがクリックされた時にUSBを開く.
                 if (mStkWriter.openUsb()) {
 
@@ -64,6 +69,12 @@ public class MainActivity extends AppCompatActivity implements StkWriterListener
             public void onClick(View v) {
                 mStkWriter.setData(R.raw.standardfirmata);
                 mStkWriter.sendFirmware();
+            }
+        });
+        mButtonClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mStkWriter.closeUsb();
             }
         });
 
@@ -162,6 +173,7 @@ public class MainActivity extends AppCompatActivity implements StkWriterListener
                     @Override
                     public void run() {
                         mTextViewCommment.setText("Firmwareの転送が成功しました。");
+                        mButtonClose.setVisibility(Button.VISIBLE);
                     }
                 });
                 break;

@@ -36,7 +36,7 @@ publishing {
         maven(MavenPublication) {
             groupId 'io.fabo.android.stk500'
             artifactId 'stk500-aar'
-            version '1.0.3'
+            version '1.0.4'
             artifact source: file("${project.buildDir}/outputs/aar/${project.name}-release.aar")
         }
     }

@@ -131,41 +131,41 @@ public class StkWriter {
      * @return true 開けた場合, false 失敗した場合
      */
     public boolean openUsb() {
-
+        Log.i(TAG, "OpenUSB----1");
         // USBManagerを取得.
         mUsbManager = (UsbManager) mContext.getSystemService(Context.USB_SERVICE);
-
+        Log.i(TAG, "OpenUSB----2");
         // 使用可能なUSB Portを取得.
         final List<UsbSerialDriver> drivers =
                 UsbSerialProber.getDefaultProber().findAllDrivers(mUsbManager);
         final List<UsbSerialPort> result = new ArrayList<UsbSerialPort>();
         final List<UsbDevice> device = new ArrayList<UsbDevice>();
-
+        Log.i(TAG, "OpenUSB----3");
         listener.onChangeStatus(STATUS_USB_INIT);
-
+        Log.i(TAG, "OpenUSB----4");
         if (drivers.size() == 0) {
             if(debugFlag) {
                 Toast.makeText(mContext, R.string.not_found_usb, Toast.LENGTH_SHORT).show();
             }
             return false;
         } else {
-
+            Log.i(TAG, "OpenUSB----5");
             // 発見したPortをResultに一時格納.
             for (final UsbSerialDriver driver : drivers) {
                 final List<UsbSerialPort> ports = driver.getPorts();
                 result.addAll(ports);
                 device.add(driver.getDevice());
             }
-
+            Log.i(TAG, "OpenUSB----6");
             // 一番最後に発見されたPortをmPortに格納.
             int count = result.size();
             mSerialPort = result.get(count - 1);
             mUsbDevice = device.get(count - 1);
-
+            Log.i(TAG, "OpenUSB----7");
             // USBの抜き差しでイベントを飛ばす.
             mPermissionIntent = PendingIntent.getBroadcast(mContext, 0, new Intent(ACTION_USB_PERMISSION), 0);
             mUsbManager.requestPermission(mUsbDevice, mPermissionIntent);
-
+            Log.i(TAG, "OpenUSB----8");
             // PortをOpen.
             UsbDeviceConnection connection = mUsbManager.openDevice(mSerialPort.getDriver().getDevice());
 
@@ -176,16 +176,18 @@ public class StkWriter {
                 listener.onError(ERROR_FAILED_CONNECTION);
                 return false;
             }
+            Log.i(TAG, "OpenUSB----9");
             listener.onChangeStatus(STATUS_USB_CONNECT);
-
+            Log.i(TAG, "OpenUSB----10");
             try {
                 mSerialPort.open(connection);
                 mSerialPort.setParameters(SPEEDRATE, 8, UsbSerialPort.STOPBITS_1, UsbSerialPort.PARITY_NONE);
-
+                Log.i(TAG, "OpenUSB----11");
                 if (debugFlag) {
                     Toast.makeText(mContext, "Open USB SerialPort.", Toast.LENGTH_SHORT).show();
                 }
-                listener.onError(STATUS_USB_OPEN);
+                listener.onChangeStatus(STATUS_USB_OPEN);
+                Log.i(TAG, "OpenUSB----12");
             } catch (IOException e) {
                 if(debugFlag) {
                     Toast.makeText(mContext, "Open Error:" + e, Toast.LENGTH_SHORT).show();
@@ -351,7 +353,9 @@ public class StkWriter {
      */
     private void onDeviceStateChange() {
         stopIoManager();
+        Log.i(TAG, "OpenUSB----13");
         startIoManager();
+        Log.i(TAG, "OpenUSB----14");
     }
 
     /**
@@ -386,6 +390,8 @@ public class StkWriter {
      * Close usb.
      */
     public void closeUsb(){
+        stopIoManager();
+
         if(mSerialPort != null) {
             try {
                 mSerialPort.close();
